@@ -18,7 +18,7 @@ export function set_shots_to_kill_cache(_cache:any):void {
 }
 
 
-export function shots_to_kill(bullet:Ammo, armor_list:Array<Item>, _armor_durabilities:Array<number> = null, health:number=80, blowthrough_rate:number = 0.0, simulations:number=250):ShotsToKill {
+export function shots_to_kill(bullet:Ammo, armor_list:Array<Item>, _armor_durabilities:Array<number> = null, health:number=85, blowthrough_rate:number = 0.0, simulations:number=250):ShotsToKill {
     if (armor_list.length === 0 || !armor_list[0]) {
         return {
             min: -1,
@@ -74,7 +74,7 @@ function _shots_to_kill(bullet:Ammo, armor_list:Array<Item>, _armor_durabilities
     let shot_count = 0;
     let armor_durabilities = _armor_durabilities.map(x => x);
 
-    for (let i = 0; i < 400; ++i) {
+    for (let i = 0; i < 440; ++i) {
         shot_count += 1;
 
         for (let j = 0; j < bullet.bullets; ++j) {
